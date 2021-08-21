@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
  * Class GuestBookProvider
  * @package App\Providers
  */
-class GuestBookProvider extends ServiceProvider
+class GuestbookProvider extends ServiceProvider
 {
     /**
      * Register any application services.
