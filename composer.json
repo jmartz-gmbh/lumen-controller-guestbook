@@ -1,0 +1,26 @@
+{
+    "name": "jmartz-gmbh/lumen-controller-guestbook",
+    "description": "Php Lumen Guestbook Controller",
+    "require": {
+        "php": "^7.3|^7.4|^8.0",
+        "illuminate/http": "^7.3.0|^8.0",
+        "illuminate/support": "^7.3.0|^8.0",
+        "illuminate/database": "^7.3.0|^8.0",
+        "jonathan-martz/lumen-controller": "dev-master",
+        "jmartz-gmbh/lumen-migration-guestbook": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "controller/",
+            "providers/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jonathan Martz",
+            "email": "composer@jmartz.de",
+            "homepage": "https://www.jmartz.de",
+            "role": "Developer"
+        }
+    ]
+}
