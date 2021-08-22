@@ -28,7 +28,7 @@ class GuestbookController extends Controller
      * @return Response
      */
     public function id(Request $request, int $id){
-        $guestbook = DB::table('guestbooks')->where('id','=',$id);
+        $guestbook = DB::table('guestbooks')->where('id','=',$id)->select(['name', 'message','created_at']);
 
         $count = $guestbook->count();
 
