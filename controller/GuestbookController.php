@@ -13,7 +13,7 @@ class GuestbookController extends Controller
      * @return Response
      */
     public function latest(Request $request){
-        $connection = DB::table('guestbook');
+        $connection = DB::table('guestbooks');
 
         $guestbook = $connection->orderBy('id', 'desc')->select(['id'])->get();
 
@@ -28,7 +28,7 @@ class GuestbookController extends Controller
      * @return Response
      */
     public function id(Request $request, int $id){
-        $guestbook = DB::table('guestbook')->where('id','=',$id);
+        $guestbook = DB::table('guestbooks')->where('id','=',$id);
 
         $count = $guestbook->count();
 
@@ -47,7 +47,7 @@ class GuestbookController extends Controller
      * @return Response
      */
     public function add(Request $request){
-        $guestbook = DB::table('guestbook');
+        $guestbook = DB::table('guestbooks');
 
         $count = $guestbook->count();
 
