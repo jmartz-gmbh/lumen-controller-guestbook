@@ -15,9 +15,9 @@ class GuestbookController extends Controller
     public function latest(Request $request){
         $connection = DB::table('guestbooks');
 
-        $guestbook = $connection->orderBy('id', 'desc')->select(['id'])->get();
+        $guestbooks = $connection->where('active','=','1')->orderBy('id', 'desc')->select(['id'])->get();
 
-        $this->addData('guestbook',$guestbook);
+        $this->addData('guestbooks',$guestbooks);
         $this->addMessage('success','All your Guestbook.');
 
         return $this->getResponse();
